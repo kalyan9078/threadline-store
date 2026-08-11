@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Threadline — Modern clothing, considered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="notice">Complimentary shipping on orders over $100 <span>•</span> Easy 30-day returns</div>
+  <header class="nav">
+    <a class="wordmark" href="#top">THREADLINE</a>
+    <nav><a href="#shop">Shop</a><a href="#about">Our story</a><a href="#journal">Journal</a></nav>
+    <button class="cart-button" id="cartButton" aria-label="Open shopping bag">Bag <span id="cartCount">0</span></button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">Spring / Summer 2026</p><h1>Made for<br><em>the everyday.</em></h1><p>Quietly confident essentials, thoughtfully designed to live in well and wear often.</p><a class="button light" href="#shop">Shop new arrivals <span>→</span></a></div>
+      <div class="hero-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85" alt="Woman in a neutral tailored outfit"><p>01 / The new uniform</p></div>
+    </section>
+    <section class="intro" id="about"><p class="eyebrow">Designed with intention</p><h2>Good clothes make room<br>for the life you want to live.</h2><a href="#shop" class="text-link">Meet the collection →</a></section>
+    <section class="collection" id="shop"><div class="section-heading"><div><p class="eyebrow">Just in</p><h2>The fresh edit</h2></div><div class="filters" id="filters"><button class="active" data-category="All">All</button><button data-category="Essentials">Essentials</button><button data-category="Tailoring">Tailoring</button><button data-category="Dresses">Dresses</button></div></div><div id="productGrid" class="product-grid" aria-live="polite"></div></section>
+    <section class="editorial" id="journal"><div class="editorial-image"><img src="https://images.unsplash.com/photo-1496217590455-aa63a8350eea?auto=format&fit=crop&w=1200&q=85" alt="Minimal clothing rail"></div><div class="editorial-copy"><p class="eyebrow">The Threadline journal</p><h2>Fewer, better<br><em>things.</em></h2><p>We believe in getting dressed without overthinking it. Pieces with a point of view, made to become part of your rhythm.</p><a href="#about" class="text-link">Read our approach →</a></div></section>
+    <section class="newsletter"><p class="eyebrow">A note from us</p><h2>Stay in the loop.</h2><p>New pieces, thoughtful stories, and 10% off your first order.</p><form id="newsletterForm"><input type="email" placeholder="Your email address" required aria-label="Email address"><button class="button dark">Sign me up →</button></form><p class="form-message" id="newsletterMessage"></p></section>
+  </main>
+  <footer><a class="wordmark" href="#top">THREADLINE</a><p>Modern clothing, considered.</p><div><a href="#shop">Instagram</a><a href="#about">Contact</a><a href="#about">Shipping & returns</a></div><small>© 2026 Threadline</small></footer>
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping bag" aria-hidden="true"><div class="cart-header"><h2>Your bag</h2><button id="closeCart" aria-label="Close bag">×</button></div><div id="cartItems" class="cart-items"><p class="empty">Your bag is waiting for something good.</p></div><div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">$0.00</strong></div><button class="button dark full" id="checkoutButton">Checkout</button></div></aside><div class="overlay" id="overlay"></div>
+  <dialog id="checkoutDialog"><button class="dialog-close" id="closeDialog">×</button><p class="eyebrow">Almost yours</p><h2>Checkout</h2><form id="checkoutForm"><input name="name" placeholder="Full name" required><input name="email" type="email" placeholder="Email address" required><button class="button dark full">Place order</button></form><p id="checkoutMessage" class="form-message"></p></dialog>
+  <script src="/static/app.js"></script>
+</body>
+</html>
